@@ -1,0 +1,563 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1d2634;
+  color: #9e9ea4;
+  font-family: "Centra", sans-serif !important;
+}
+
+.icon {
+  vertical-align: middle;
+  line-height: 1px;
+  font-size: 20px;
+}
+.icon_header {
+  vertical-align: middle;
+  line-height: 1px;
+  font-size: 26px;
+}
+.icon,
+.icon_header {
+  margin-right: 5px;
+}
+
+.close_icon {
+  color: red;
+  margin-left: 30px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.grid-container {
+  display: grid;
+
+  grid-template-columns: 260px 1fr;
+  gap: 10px; /* adjust gap between grid items */
+  grid-template-rows: 0.2fr 3fr;
+  grid-template-areas:
+    "sidebar header header header"
+    "sidebar main main main";
+  height: 100vh;
+}
+
+.grid-containerr {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 10px; /* adjust gap between grid items */
+  grid-template-rows: 0.2fr 3fr;
+  grid-template-areas:
+    "sidebar header header header"
+    "sidebar main main main";
+  height: 100vh;
+}
+div.dt-datetime div.dt-datetime-iconLeft button::before {
+  content: "\2190"; /* Unicode arrow character */
+  color: white; /* Change the color to white */
+}
+div.dt-datetime div.dt-datetime-iconLeft:after {
+  color: white;
+}
+div.dt-datetime table button span {
+  color: white;
+}
+div.dt-datetime table button {
+  background-color: #212529;
+}
+
+.dt-datetime-date,
+.dt-datetime-button {
+  background-color: #212529; /* Change to your desired background color */
+}
+/* Header  */
+.header {
+  grid-area: header;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px 0 30px;
+  box-shadow: 0 6px 7px -3px rgba(0, 0, 0, 0.35);
+}
+
+.menu-icon {
+  display: none;
+}
+
+/* End Header  */
+
+/* Sidebar  */
+
+/* styles.css */
+.sidebar-list-item {
+  list-style: none;
+}
+
+.sidebar-list-item a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000; /* Change color as needed */
+  transition: transform 0.2s; /* Add transition effect */
+}
+
+.sidebar-list-item a:hover {
+  color: #ff4500; /* Change color on hover */
+  transform: scale(1.1); /* Enlarge on hover */
+}
+.sidebar-list-item a:hover .icon {
+  width: 30px; /* Enlarge width of the icon on hover */
+  height: 30px; /* Enlarge height of the icon on hover */
+}
+.icon {
+  margin-right: 5px; /* Adjust spacing between icon and text */
+  width: 35px; /* Static width of the icon */
+  height: 25px; /* Static height of the icon */
+}
+.sub-items {
+  display: none; /* Initially hide sub-items */
+  margin-left: 20px; /* Indent sub-items */
+  list-style: none; /* Remove default list-style */
+  margin-top: 20px;
+  background-color: blue;
+  border-radius: 5px;
+  align-items: justify;
+  font-size: 15px;
+  text-align: justify;
+  padding: 10px;
+}
+.sidebar-list-item:hover .sub-items {
+  display: block; /* Show sub-items on hover */
+}
+
+#sidebar {
+  grid-area: sidebar;
+  height: 100%;
+  background-color: #1e2428;
+
+  overflow-y: auto;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.sidebar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px 0px 30px;
+  margin-bottom: 30px;
+}
+
+.sidebar-title > span {
+  display: none;
+}
+
+.sidebar-brand {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.sidebar-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.sidebar-list-item {
+  padding: 20px 20px 20px 20px;
+  font-size: 16px;
+}
+
+/* .sidebar-list-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+} */
+
+.sidebar-list-item2 {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 24px; /* Adjust size as needed */
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: -10px; /* Adjust position */
+  right: -10px; /* Adjust position */
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.badge:hover {
+  background: darkred;
+}
+
+.pending {
+  margin-top: 20px;
+}
+
+.bg-dark {
+  background-color: #343a40;
+  color: white;
+}
+
+.sidebar-list-item > a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.sidebar-responsive {
+  display: inline !important;
+  position: absolute;
+  /*
+      we want the z-index of the sidebar higher so that
+      the charts are not showing over the sidebar 
+      on small screens
+    */
+  z-index: 12 !important;
+}
+
+/* End Sidebar  */
+
+/* Main  */
+/* .main-container {
+  grid-area: main;
+  overflow-y: auto;
+  color: rgba(255, 255, 255, 0.95);
+} */
+
+/*DASHBOARD STYLING*/
+.main-container {
+  grid-area: main;
+  overflow-y: auto;
+  padding: 20px 10px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.main-title {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+.main-title h3 {
+  background-color: #1e2428;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-top: -50px;
+}
+
+.main-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  margin: 15px 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 8px 10px;
+  padding: 20px;
+  border-radius: 5px;
+}
+.card h3 {
+  font-size: 20px;
+  color: black;
+  margin-top: -20px;
+}
+
+.card h1 {
+  font-size: 40px;
+  color: black;
+  margin-bottom: -10px;
+}
+
+.card:first-child {
+  background-color: #ffffff;
+  border-left: 10px solid #295ac6; /* Adjust the color and width as needed */
+}
+
+.card:nth-child(2) {
+  background-color: #ffffff;
+  border-left: 10px solid #e7ac0a; /* Adjust the color and width as needed */
+}
+
+.card:nth-child(3) {
+  background-color: #ffffff;
+  border-left: 10px solid #0eb145; /* Adjust the color and width as needed */
+}
+
+.card:nth-child(4) {
+  background-color: #ffffff;
+  border-left: 10px solid #d50000; /* Adjust the color and width as needed */
+}
+
+.card-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-inner > .card_icon {
+  font-size: 25px;
+}
+
+.charts {
+  display: grid; /* Specify it as a grid container */
+  grid-template-columns: repeat(1, 1fr); /* Two columns with equal width */
+  gap: 10px;
+  margin-top: -100px;
+  margin-left: -50px;
+  height: 300px;
+}
+.charts3 {
+  display: grid; /* Specify it as a grid container */
+  grid-template-columns: repeat(1, 1fr); /* Two columns with equal width */
+  gap: 10px;
+  margin-top: 200px;
+  margin-left: -50px;
+  height: 300px;
+}
+.charts2 {
+  display: grid; /* Specify it as a grid container */
+  grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
+  gap: 20px;
+  margin-top: 400px;
+  height: 300px;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center; /* Horizontally center */
+}
+.img {
+  width: 120px;
+  height: 100px;
+  margin-top: 40px;
+}
+.img-container {
+  margin-left: 40px;
+  margin-top: -30px;
+}
+.shop {
+  margin-left: 50px;
+}
+.divider {
+  background-color: white;
+  border: 0; /* Removes default border */
+  height: 4px; /* Sets the height of the line */
+  margin: 10px 0; /* Adjusts the margin above and below the line */
+}
+.total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+.total h3 {
+  background-color: #1e2428;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  margin-left: 50px;
+}
+
+/* End Main  */
+
+/* Medium <= 992px */
+
+@media screen and (max-width: 992px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+      "header"
+      "main";
+  }
+
+  #sidebar {
+    display: none;
+  }
+
+  .menu-icon {
+    display: inline;
+  }
+
+  .sidebar-title > span {
+    display: inline;
+  }
+}
+
+/* Small <= 768px */
+
+@media screen and (max-width: 768px) {
+  .main-cards {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 0;
+  }
+
+  .charts {
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+  }
+}
+
+/* Extra Small <= 576px */
+
+@media screen and (max-width: 576px) {
+  .header-left {
+    display: none;
+  }
+}
+
+/*RECENT PENDING REQUEST*/
+
+.pending {
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 3px;
+  border-radius: 5px;
+  margin-top: -25px;
+  margin-bottom: 50px;
+}
+
+.column {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.recent {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -20px;
+  margin-left: -50px;
+}
+
+.recent h3 {
+  background-color: #1e2428;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-left: 0px;
+  margin: 50px;
+}
+
+.custom-modal {
+  .modal-content {
+    background-color: white;
+    color: #333333; /* Gray color */
+    font-weight: 400; /* Bold font weight */
+    padding: 10px 10px;
+  }
+
+  .modal-title {
+    color: #333333; /* Gray color */
+    font-weight: 700; /* Bold font weight */
+  }
+
+  .modal-body {
+    color: #696666; /* Gray color */
+    font-weight: 400; /* Bold font weight */
+    letter-spacing: 1px;
+  }
+}
+
+.location {
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 3px;
+  border-radius: 5px;
+  margin-top: -25px;
+  margin-bottom: 50px;
+}
+
+.column {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.req {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 300px;
+  margin-left: -50px;
+}
+
+.req h3 {
+  background-color: #1e2428;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-left: 0px;
+  margin: 50px;
+}
+
+.apptech {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-left: -50px;
+}
+
+.apptech h3 {
+  background-color: #1e2428;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-left: 0px;
+  margin: 50px;
+}
+
+/*CUSTOMIZE HOVER REQUEST STYLING*/
+/* Style for the hover effect */
+.sub-items li a:hover {
+  background-color: #f0f0f0;
+  /* Add other styles as needed */
+}
+
+/* Style for the link */
+.sub-items li a {
+  text-decoration: none; /* Remove underline */
+  color: #333; /* Set link color */
+}
+
+/* Style for the link when visited */
+.sub-items li a:visited {
+  color: #ffffff; /* Set visited link color */
+}
+
+/* Style for the link when hovered */
+.sub-items li a:hover {
+  color: #000; /* Set link color on hover */
+}
+
+/*OT HISTORY STARTS HERE*/
+
+.history-container {
+  overflow-x: auto;
+  /* margin-right: 20px; */
+}
+
+table {
+  width: 100%;
+}
